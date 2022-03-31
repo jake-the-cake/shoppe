@@ -74,7 +74,7 @@ const Navbar = () => {
 					</SearchContainer>
 				</Left>
 				<Center>
-					<Logo>Jelly Shoppe</Logo>
+					<Logo>Jelly Shoppe.</Logo>
 				</Center>
 				<Right>
 					<MenuItem>REGISTER</MenuItem>
