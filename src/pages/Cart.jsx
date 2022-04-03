@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import {Colors} from '../colors.js';
 import { Add, Remove } from '@material-ui/icons';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 	width: 100%;
@@ -15,6 +16,7 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
+  ${mobile({ padding: "10px" })};
 `;
 
 const Title = styled.h1`
@@ -53,6 +55,7 @@ const TopTexts = styled.div`
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
+  ${mobile({ display: "none" })};
 `;
 
 const TopText = styled.a`
@@ -77,6 +80,7 @@ const Bottom = styled.div`
 	border: 1px solid ${Colors.darkGreen};
 	display: flex;
 	justify-content: space-between;
+    ${mobile({ flexDirection: "column" })};
 `;
 
 const Info = styled.div`
@@ -98,6 +102,8 @@ const Product = styled.div`
 		border: none;
 		padding-bottom: 0px;
 	}
+
+	${mobile({ flexDirection: "column" })};
 `;
 
 const ProductDetail = styled.div`
@@ -141,6 +147,7 @@ const PriceDetail = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+  ${mobile({ flexDirection: "row", justifyContent: "space-between" })};
 `;
 
 const ProductAmountContainer = styled.div`
@@ -149,6 +156,7 @@ const ProductAmountContainer = styled.div`
 	align-items: center;
 	column-gap: 5px;
 	margin-bottom: 20px;
+  ${mobile({ columnGap: "10px", paddingTop: "25px" })};
 `;
 
 const ProductAmount = styled.div`

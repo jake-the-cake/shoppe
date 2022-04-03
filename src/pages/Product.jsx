@@ -5,6 +5,8 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
+import { mobile } from '../responsive';
+import { Snips } from '../snips';
 
 const Container = styled.div`
 
@@ -12,7 +14,8 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
     padding: 50px;
-    display: flex;
+    ${Snips.dis.fl}
+    ${mobile({flexDirection:"column",padding:"10px"})};
 `;
 
 const ImgContainer = styled.div`
@@ -23,11 +26,13 @@ const Image = styled.img`
     width: 100%;
     height: 90vh;
     object-fit: cover;
+    ${mobile({ height: "35vh" })};
 `;
 
 const InfoContainer = styled.div`
     padding: 0px 50px;
     flex: 1;
+    ${mobile({ padding: "10px" })};
 `;
 
 const Title = styled.h1`
@@ -48,7 +53,7 @@ const FilterContainer = styled.div`
     width: 70%;
     margin: 30px 0px;
     justify-content: space-between;
-
+    ${mobile({ width:"100%" })};
 `;
 
 const Filter = styled.div`
@@ -84,6 +89,7 @@ const AddContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobile({ width: "100%" })};
 `;
 
 const AmountContainer = styled.div`

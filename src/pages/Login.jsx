@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 	width: 100vw;
@@ -16,6 +17,7 @@ const Wrapper = styled.div`
 	min-width: 300px;
 	padding: 20px;
 	background-color: white;
+	${mobile({ width:"75%"})};
 `;
 
 const Title = styled.h1`
@@ -70,7 +72,6 @@ const Link = styled.a`
 	padding-top: 2px;
 	color: #23a456;
 	cursor: pointer;
-
 
 	&:hover{
 		color: #76e567;
